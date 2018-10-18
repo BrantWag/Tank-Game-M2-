@@ -1,0 +1,37 @@
+﻿Controller_AI:
+	Controller_AI holds all of the info for controlling the AI's. FSM are in there seperate repective scripts. This script is for controlling their movements, rotations and senses.
+
+Aggro: 
+	Agressive AI will rotate towards the player and shoot at him until he is dead or out of range.
+	Patrol:
+		Patrols betweens waypoinys looking for the player. When it finds the player it goes into chase state
+	Chase:
+		it targets the player and then will get within a range that a designer can set and then keeps shooting until he loses the target or the AI's health gets below half then it switches to flee.
+	Flee:
+		Runs away from the player for a designer set time and then will return to targets position. 
+
+Holds Grounds: 
+	Will not patrol but instead will look for player at all times and then will shoot at the target until it it dead!
+	Chase:
+		Will get close enough to be able to shoot at the player.
+	Flee:
+		Gets enough distance to shoot at the player safely.
+
+Creeper :
+	Tries to get behind tagert player and shoot him 
+	Patrol: 
+		Patrols betweens waypoinys looking for the player. When it finds the player it goes into chase state
+	Chase: 
+		tries to get behind the player and then will rotate to start firing at target.
+		If he loses the target player he will return to Patrol state.
+	Flee:
+		Runs away for designer set time and then will return to Patrol state.
+
+Scared : 
+	 This AI is always scared and will run away from the player at all times.
+	Patrol:
+		Does not patrol between waypoints but will patrol by looking for player.
+	Chase:
+		Will go back to spot he fleed from and sit there and look for the player. if player is not found then will "patrol" for the player.
+	Flee:
+		Will flee for Designer set period and then retun to point of origion for flee to check if player target is there.
